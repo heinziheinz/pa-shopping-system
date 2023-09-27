@@ -22,12 +22,7 @@ public class ShoppingSystem {
     }
 
     public int witchCustomerSpentTheMost(List<Order> orders) {
-
-
-        // Calculate the start of the last month
-        LocalDate today = LocalDate.now();
-        LocalDate startOfLastMonth = today.minusMonths(1).withDayOfMonth(1).minusDays(1);
-        LocalDate startOfCurrentMonth = today.withDayOfMonth(1);
+//        - Create a function that shows which customer spent the most in the last month.
 
         Map<Integer, Double> allOrders = orders.stream()
                 .filter(order -> order.date().getMonth().equals(LocalDate.now().getMonth().minus(1)))
